@@ -40,6 +40,7 @@ async function bootstrap() {
         })
     }
 
+    console.log('configService')
     // Swagger
     await swaggerInit(app)
 

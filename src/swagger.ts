@@ -15,6 +15,7 @@ import { SwaggerTheme } from 'swagger-themes'
 
 export default async function (app: NestApplication) {
     const configService = app.get(ConfigService)
+    console.log('configService', configService)
     const env: string = configService.get<string>('app.env')
     const logger = new Logger()
 
