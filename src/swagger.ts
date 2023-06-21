@@ -5,10 +5,10 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'
 import {
     AwsS3MultipartPartsSerialization,
     AwsS3MultipartSerialization,
-} from 'common/serializations/aws/aws.s3-multipart.serialization'
-import { AwsS3Serialization } from 'common/serializations/aws/aws.s3.serialization'
-import { ResponseDefaultSerialization } from 'common/serializations/response/response.default.serialization'
-import { ResponsePagingSerialization } from 'common/serializations/response/response.paging.serialization'
+} from 'infrastructure/serializations/aws/aws.s3-multipart.serialization'
+import { AwsS3Serialization } from 'infrastructure/serializations/aws/aws.s3.serialization'
+import { ResponseDefaultSerialization } from 'infrastructure/serializations/response/response.default.serialization'
+import { ResponsePagingSerialization } from 'infrastructure/serializations/response/response.paging.serialization'
 import { ENUM_APP_ENVIRONMENT } from 'constants/app/app.enum.constant'
 import { writeFileSync } from 'fs'
 import { SwaggerTheme } from 'swagger-themes'

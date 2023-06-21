@@ -1,9 +1,9 @@
 import { ApiProperty, PickType } from '@nestjs/swagger'
-import { RequestPaginationSerialization } from 'common/serializations/request/request.pagination.serialization'
 import {
+    RequestPaginationSerialization,
     ResponseDefaultSerialization,
     ResponseMetadataSerialization,
-} from 'common/serializations/response/response.default.serialization'
+} from 'infrastructure/serializations'
 
 export class ResponsePaginationCursorSerialization {
     nextPage: string
