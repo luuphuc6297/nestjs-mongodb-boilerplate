@@ -1,4 +1,4 @@
-import { IPaginationOptions } from 'interfaces/pagination/pagination.interface'
+import { IPaginationOptions } from 'interfaces'
 import { PopulateOptions } from 'mongoose'
 
 // find one

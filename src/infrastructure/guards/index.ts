@@ -1,10 +1,7 @@
-import { ExecutionContext, createParamDecorator } from "@nestjs/common";
-
-export const AuthJwtPayload = createParamDecorator(
-    (data: string, ctx: ExecutionContext): Record<string, any> => {
-        const { user } = ctx
-            .switchToHttp()
-            .getRequest<IRequestApp & { user: UserPayloadSerialization }>();
-        return data ? user[data] : user;
-    }
-);
+export * from './google-oauth2/auth.google-oauth2-login.guard'
+export * from './google-oauth2/auth.google-oauth2-login.strategy'
+export * from './google-oauth2/auth.google-oauth2-sign-up.guard'
+export * from './jwt-access/auth.jwt-access.guard'
+export * from './jwt-access/auth.jwt-access.strategy'
+export * from './jwt-refresh/auth.jwt-refresh.guard'
+export * from './jwt-refresh/auth.jwt-refresh.strategy'

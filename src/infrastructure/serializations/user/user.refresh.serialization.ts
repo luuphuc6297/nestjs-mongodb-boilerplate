@@ -1,3 +1,3 @@
-import { UserLoginSerialization } from 'src/modules/user/serializations/user.login.serialization';
+import { UserLoginSerialization } from 'infrastructure/serializations'
 
 export class UserRefreshSerialization extends UserLoginSerialization {}

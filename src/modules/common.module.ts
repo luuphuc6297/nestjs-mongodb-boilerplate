@@ -9,6 +9,7 @@ import { ENUM_MESSAGE_LANGUAGE } from 'constants/message/message.enum.constant'
 import { DatabaseOptionsModule } from 'database/database.module'
 import { DatabaseOptionsService } from 'database/providers/database.services'
 import * as Joi from 'joi'
+import { AuthModule } from './auth/auth.module'
 
 @Module({
     controllers: [],
@@ -107,6 +108,7 @@ import * as Joi from 'joi'
             useFactory: (databaseOptionsService: DatabaseOptionsService) =>
                 databaseOptionsService.createOptions(),
         }),
+        AuthModule,
     ],
 })
-export class MainModule {}
+export class CommonModule {}

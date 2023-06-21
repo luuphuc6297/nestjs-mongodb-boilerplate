@@ -1,5 +1,5 @@
 import { HttpStatus } from '@nestjs/common'
-import { IMessageOptionsProperties } from 'interfaces/message/message.interface'
+import { IMessageOptionsProperties } from 'interfaces'
 
 export interface IResponseCustomPropertyMetadata {
     statusCode?: number

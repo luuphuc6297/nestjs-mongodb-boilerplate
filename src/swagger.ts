@@ -2,15 +2,15 @@ import { Logger } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
 import { NestApplication } from '@nestjs/core'
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'
+import { ENUM_APP_ENVIRONMENT } from 'constants/app/app.enum.constant'
+import { writeFileSync } from 'fs'
 import {
     AwsS3MultipartPartsSerialization,
     AwsS3MultipartSerialization,
-} from 'infrastructure/serializations/aws/aws.s3-multipart.serialization'
-import { AwsS3Serialization } from 'infrastructure/serializations/aws/aws.s3.serialization'
-import { ResponseDefaultSerialization } from 'infrastructure/serializations/response/response.default.serialization'
-import { ResponsePagingSerialization } from 'infrastructure/serializations/response/response.paging.serialization'
-import { ENUM_APP_ENVIRONMENT } from 'constants/app/app.enum.constant'
-import { writeFileSync } from 'fs'
+    AwsS3Serialization,
+    ResponseDefaultSerialization,
+    ResponsePagingSerialization,
+} from 'infrastructure/serializations'
 import { SwaggerTheme } from 'swagger-themes'
 
 export default async function (app: NestApplication) {
