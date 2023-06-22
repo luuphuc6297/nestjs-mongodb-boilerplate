@@ -24,7 +24,7 @@ export class DatabaseOptionsService implements IDatabaseOptionsService {
         let uri = `${host}`
 
         if (database) {
-            uri = `${uri}/${database}${options}`
+            uri = `${uri}`
         }
 
         if (env !== ENUM_APP_ENVIRONMENT.PRODUCTION) {
@@ -33,12 +33,10 @@ export class DatabaseOptionsService implements IDatabaseOptionsService {
 
         const mongooseOptions: MongooseModuleOptions = {
             uri,
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            serverSelectionTimeoutMS: 5000,
-            autoCreate: true,
+            // useNewUrlParser: true,
+            // useUnifiedTopology: true,
+            // serverSelectionTimeoutMS: 5000,
+            // autoCreate: true,
             // useMongoClient: true,
         }
 

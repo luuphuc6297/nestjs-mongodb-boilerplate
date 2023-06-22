@@ -1,8 +1,8 @@
 import { Logger, VersioningType } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
 import { NestApplication, NestFactory } from '@nestjs/core'
-import { useContainer } from 'class-validator'
 import { AppModule } from 'app/app.module'
+import { useContainer } from 'class-validator'
 import swaggerInit from './swagger'
 
 async function bootstrap() {
@@ -10,6 +10,7 @@ async function bootstrap() {
     const configService = app.get(ConfigService)
 
     const databaseUri: string = configService.get<string>('database.host')
+
     const env: string = configService.get<string>('app.env')
 
     const host: string = configService.get<string>('app.http.host')
@@ -40,17 +41,11 @@ async function bootstrap() {
         })
     }
 
-    console.log('configService')
     // Swagger
     await swaggerInit(app)
 
     // Listen
     await app.listen(port, host)
-
-    logger.log(`==========================================================`)
-
-    logger.log(`Environment Variable`, 'NestApplication')
-    logger.log(JSON.parse(JSON.stringify(process.env)), 'NestApplication')
 
     logger.log(`==========================================================`)
 

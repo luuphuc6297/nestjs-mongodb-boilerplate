@@ -42,8 +42,12 @@ import { HelperModule } from './helper/helper.module'
                 HTTP_VERSIONING_ENABLE: Joi.boolean().default(true).required(),
                 HTTP_VERSION: Joi.number().required(),
 
-                DATABASE_HOST: Joi.string().default('mongodb://localhost:27017').required(),
-                DATABASE_NAME: Joi.string().default('nestjs-mongodb').required(),
+                DATABASE_HOST: Joi.string()
+                    .default(
+                        'mongodb+srv://luuphuc:luuphuc@hgbocluster.iirfd.mongodb.net/nestjs-mongodb-boilerplate'
+                    )
+                    .required(),
+                DATABASE_NAME: Joi.string().default('nestjs-mongodb-boilerplate').required(),
                 DATABASE_USER: Joi.string().allow(null, '').optional(),
                 DATABASE_PASSWORD: Joi.string().allow(null, '').optional(),
                 DATABASE_DEBUG: Joi.boolean().default(false).required(),

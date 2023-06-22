@@ -15,7 +15,6 @@ import { SwaggerTheme } from 'swagger-themes'
 
 export default async function (app: NestApplication) {
     const configService = app.get(ConfigService)
-    console.log('configService', configService)
     const env: string = configService.get<string>('app.env')
     const logger = new Logger()
 
@@ -35,7 +34,7 @@ export default async function (app: NestApplication) {
             .addServer('/prod')
             .addBearerAuth({ type: 'http', scheme: 'bearer', bearerFormat: 'JWT' }, 'accessToken')
             .addBearerAuth({ type: 'http', scheme: 'bearer', bearerFormat: 'JWT' }, 'refreshToken')
-            .addApiKey({ type: 'apiKey', in: 'header', name: 'x-api-key' }, 'apiKey')
+            // .addApiKey({ type: 'apiKey', in: 'header', name: 'x-api-key' }, 'apiKey')
             .build()
 
         const document = SwaggerModule.createDocument(app, documentBuild, {
