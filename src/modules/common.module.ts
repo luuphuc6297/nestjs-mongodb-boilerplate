@@ -10,6 +10,7 @@ import { DatabaseOptionsModule } from 'database/database.module'
 import { DatabaseOptionsService } from 'database/providers/database.services'
 import * as Joi from 'joi'
 import { AuthModule } from './auth/auth.module'
+import { HelperModule } from './helper/helper.module'
 
 @Module({
     controllers: [],
@@ -108,7 +109,8 @@ import { AuthModule } from './auth/auth.module'
             useFactory: (databaseOptionsService: DatabaseOptionsService) =>
                 databaseOptionsService.createOptions(),
         }),
-        AuthModule,
+        AuthModule.forRoot(),
+        HelperModule,
     ],
 })
 export class CommonModule {}

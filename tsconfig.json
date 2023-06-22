@@ -15,9 +15,12 @@
         "strictNullChecks": false,
         "noImplicitAny": false,
         "strictBindCallApply": false,
+        "esModuleInterop": true,
+        "allowJs": false,
         "forceConsistentCasingInFileNames": false,
         "noFallthroughCasesInSwitch": false,
         "resolveJsonModule": true
     },
-    "include": ["src", "test"]
+    "include": ["src", "test"],
+    "exclude": ["node_modules", "dist", "*coverage", "logs", "data"]
 }

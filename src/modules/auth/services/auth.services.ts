@@ -1,3 +1,4 @@
+import { Injectable } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
 import {
     IAuthPassword,
@@ -10,6 +11,7 @@ import { HelperEncryptionService } from 'modules/helper/services/helper.encrypti
 import { HelperHashService } from 'modules/helper/services/helper.hash.service'
 import { HelperStringService } from 'modules/helper/services/helper.string.service'
 
+@Injectable()
 export class AuthService implements IAuthService {
     private readonly accessTokenSecretKey: string
     private readonly accessTokenExpirationTime: number

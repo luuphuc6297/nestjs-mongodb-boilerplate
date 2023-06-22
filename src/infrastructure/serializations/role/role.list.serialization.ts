@@ -1,6 +1,6 @@
 import { ApiProperty, OmitType } from '@nestjs/swagger'
 import { Transform } from 'class-transformer'
-import { RoleGetSerialization } from './role.get.serialization'
+import { RoleGetSerialization } from 'infrastructure/serializations'
 
 export class RoleListSerialization extends OmitType(RoleGetSerialization, [
     'permissions',

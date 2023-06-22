@@ -1,6 +1,6 @@
-import { ApiHideProperty, OmitType } from '@nestjs/swagger';
-import { Exclude } from 'class-transformer';
-import { UserGetSerialization } from './user.get.serialization';
+import { ApiHideProperty, OmitType } from '@nestjs/swagger'
+import { Exclude } from 'class-transformer'
+import { UserGetSerialization } from './user.get.serialization'
 
 export class UserProfileSerialization extends OmitType(UserGetSerialization, [
     'isActive',
@@ -14,33 +14,33 @@ export class UserProfileSerialization extends OmitType(UserGetSerialization, [
 ] as const) {
     @ApiHideProperty()
     @Exclude()
-    readonly isActive: boolean;
+    readonly isActive: boolean
 
     @ApiHideProperty()
     @Exclude()
-    readonly inactivePermanent: boolean;
+    readonly inactivePermanent: boolean
 
     @ApiHideProperty()
     @Exclude()
-    readonly blocked: boolean;
+    readonly blocked: boolean
 
     @ApiHideProperty()
     @Exclude()
-    readonly passwordExpired: Date;
+    readonly passwordExpired: Date
 
     @ApiHideProperty()
     @Exclude()
-    readonly passwordCreated: Date;
+    readonly passwordCreated: Date
 
     @ApiHideProperty()
     @Exclude()
-    readonly passwordAttempt: number;
+    readonly passwordAttempt: number
 
     @ApiHideProperty()
     @Exclude()
-    readonly inactiveDate?: Date;
+    readonly inactiveDate?: Date
 
     @ApiHideProperty()
     @Exclude()
-    readonly blockedDate?: Date;
+    readonly blockedDate?: Date
 }

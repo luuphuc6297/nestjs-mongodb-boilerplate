@@ -7,7 +7,8 @@ import {
 } from 'constants/policy/policy.enum.constant'
 import { ENUM_ROLE_TYPE } from 'constants/role/role.enum.constant'
 import { ENUM_USER_SIGN_UP_FROM } from 'constants/user/user.enum.constant'
-import { AwsS3Serialization, UserProfileSerialization } from 'infrastructure/serializations'
+import { AwsS3Serialization } from 'infrastructure/serializations/aws/aws.s3.serialization'
+import { UserProfileSerialization } from 'infrastructure/serializations/user/user.profile.serialization'
 import { IPolicyRule } from 'interfaces'
 export class UserPayloadPermissionSerialization {
     @ApiProperty({

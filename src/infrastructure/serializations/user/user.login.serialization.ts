@@ -1,5 +1,5 @@
-import { faker } from '@faker-js/faker';
-import { ApiProperty } from '@nestjs/swagger';
+import { faker } from '@faker-js/faker'
+import { ApiProperty } from '@nestjs/swagger'
 
 export class UserLoginSerialization {
     @ApiProperty({
@@ -7,7 +7,7 @@ export class UserLoginSerialization {
         required: true,
         nullable: false,
     })
-    readonly tokenType: string;
+    readonly tokenType: string
 
     @ApiProperty({
         example: 1660190937231,
@@ -15,7 +15,7 @@ export class UserLoginSerialization {
         required: true,
         nullable: false,
     })
-    readonly expiresIn: string;
+    readonly expiresIn: string
 
     @ApiProperty({
         example: faker.string.alphanumeric(30),
@@ -23,7 +23,7 @@ export class UserLoginSerialization {
         required: true,
         nullable: false,
     })
-    readonly accessToken: string;
+    readonly accessToken: string
 
     @ApiProperty({
         example: faker.string.alphanumeric(30),
@@ -31,5 +31,5 @@ export class UserLoginSerialization {
         required: true,
         nullable: false,
     })
-    readonly refreshToken: string;
+    readonly refreshToken: string
 }
