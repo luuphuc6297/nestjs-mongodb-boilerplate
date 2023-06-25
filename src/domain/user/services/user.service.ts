@@ -5,8 +5,8 @@ import {
     IDatabaseCreateOptions,
     IDatabaseFindAllOptions,
     IDatabaseFindOneOptions,
+    IDatabaseSaveOptions,
     IUserEntity,
-    // IUserService,
 } from 'interfaces'
 import { HelperDateService } from 'modules/helper/services/helper.date.service'
 import { HelperStringService } from 'modules/helper/services/helper.string.service'
@@ -84,5 +84,13 @@ export class UserService {
         create.signUpFrom = signUpFrom
 
         return this.userRepository.create<UserEntity>(create, options)
+    }
+
+    async inactivePermanent(repository: UserDoc, options?: IDatabaseSaveOptions): Promise<UserDoc> {
+        repository.isActive = false
+        repository.inactivePermanent = true
+        repository.inactiveDate = this.helperDateService.create()
+
+        return this.userRepository.save(repository, options)
     }
 }

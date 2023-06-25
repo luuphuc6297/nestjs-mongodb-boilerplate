@@ -44,6 +44,7 @@
     "joi": "^17.9.2",
     "moment": "^2.29.4",
     "mongoose": "^7.3.0",
+    "nestjs-i18n": "^10.2.6",
     "passport": "^0.6.0",
     "passport-google-oauth20": "^2.0.0",
     "passport-headerapikey": "^1.2.2",
@@ -52,7 +53,8 @@
     "rimraf": "^5.0.1",
     "rxjs": "^7.8.1",
     "swagger-themes": "^1.2.28",
-    "ua-parser-js": "^1.0.35"
+    "ua-parser-js": "^1.0.35",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@nestjs/cli": "^9.5.0",
