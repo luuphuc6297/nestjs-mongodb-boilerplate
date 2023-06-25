@@ -1,11 +1,16 @@
 {
-    "$schema": "https://json.schemastore.org/nest-cli",
     "collection": "@nestjs/schematics",
     "sourceRoot": "src",
     "compilerOptions": {
-        "deleteOutDir": true,
         "plugins": ["@nestjs/swagger"],
+        "assets": [
+            {
+                "include": "languages/**/*",
+                "outDir": "dist/src"
+            }
+        ],
         "webpack": false,
+        "deleteOutDir": true,
         "watchAssets": false
     }
 }
