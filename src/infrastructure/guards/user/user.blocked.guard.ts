@@ -7,7 +7,7 @@ import { IRequestApp } from 'interfaces'
 
 @Injectable()
 export class UserBlockedGuard implements CanActivate {
-    constructor(private reflector: Reflector) { }
+    constructor(private reflector: Reflector) {}
 
     async canActivate(context: ExecutionContext): Promise<boolean> {
         const required: boolean[] = this.reflector.getAllAndOverride<boolean[]>(

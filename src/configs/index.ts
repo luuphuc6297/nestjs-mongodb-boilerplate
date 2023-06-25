@@ -3,6 +3,7 @@ import AuthConfig from './auth.config'
 import DatabaseConfig from './database.config'
 import DocConfig from './doc.config'
 import HelperConfig from './helper.config'
+import MessageConfig from './message.config'
 import RequestConfig from './request.config'
 import UserConfig from './user.config'
 
@@ -15,4 +16,5 @@ export default [
     HelperConfig,
     RequestConfig,
     UserConfig,
+    MessageConfig,
 ]

@@ -11,6 +11,7 @@ import { DatabaseOptionsService } from 'database/providers/database.services'
 import * as Joi from 'joi'
 import { AuthModule } from './auth/auth.module'
 import { HelperModule } from './helper/helper.module'
+import { MessageModule } from './message/message.module'
 
 @Module({
     controllers: [],
@@ -115,6 +116,7 @@ import { HelperModule } from './helper/helper.module'
         }),
         AuthModule.forRoot(),
         HelperModule,
+        MessageModule,
     ],
 })
 export class CommonModule {}
